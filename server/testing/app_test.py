@@ -39,6 +39,7 @@ class TestApp:
             })
 
             response_json = client.get('/members_only_articles').get_json()
+            print(response_json)
             for article in response_json:
                 assert article['is_member_only'] == True
 
